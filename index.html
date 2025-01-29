@@ -11,7 +11,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: url('your-image-url.jpg') no-repeat center center fixed;
+            background: url('https://cdn.pixabay.com/photo/2017/07/10/20/56/religious-2262785_960_720.jpg') no-repeat center center fixed;
             background-size: cover;
             color: white;
         }
@@ -29,7 +29,7 @@
         /* Grid Layout for Boxes */
         .container {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* Three columns for boxes */
+            grid-template-columns: 1fr 2fr 1fr; /* Adjust columns: Calendly box takes 2 columns */
             gap: 20px;
             padding: 20px;
         }
@@ -62,6 +62,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-left: 0; /* Remove space on the left */
         }
 
         .calendly-box iframe {
@@ -101,6 +102,31 @@
             text-decoration: none;
             font-weight: bold;
         }
+
+        .about-box {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            grid-column: span 3; /* Makes the about section span all three columns */
+        }
+
+        .about-box h2 {
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        .about-box p {
+            color: white;
+            font-size: 1.2em;
+        }
+
+        .about-box a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
     </style>
 </head>
 
@@ -132,13 +158,21 @@
             <p>Learn Arabic to understand the Quran and Islamic texts better.</p>
         </div>
 
-        <!-- Calendly Scheduling Box (Larger) -->
+        <!-- Calendly Scheduling Box (Wider and aligned left) -->
         <div class="calendly-box">
             <!-- Calendly inline widget begin -->
             <div class="calendly-inline-widget" data-url="https://calendly.com/learn9574/60min" style="min-width:320px;height:500px;"></div>
             <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
             <!-- Calendly inline widget end -->
         </div>
+    </section>
+
+    <!-- About Section (Clickable Box) -->
+    <section class="about-box">
+        <h2>About Us</h2>
+        <p>We offer comprehensive Quran and Islamic studies lessons for learners of all ages. Our goal is to spread knowledge of the Quran, Islamic teachings, and Arabic language to help everyone deepen their understanding and connection with Islam. </p>
+        <p>Click below to learn more about our services:</p>
+        <a href="#services">Learn More</a>
     </section>
 
     <!-- Contact Information Section -->
