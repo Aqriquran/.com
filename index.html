@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,10 +41,12 @@
         /* Container for Boxes */
         .container {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             gap: 20px;
             padding: 40px 0;
             flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .box {
@@ -52,13 +55,14 @@
             text-align: center;
             border-radius: 8px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-            flex: 1 1 30%;
+            flex: 1;
+            min-width: 280px;
             margin-bottom: 20px;
             transition: background-color 0.3s ease-in-out;
         }
 
         .box:hover {
-            background-color: #1E90FF; /* Changed hover color to a soft blue */
+            background-color: #1E90FF; /* Changed hover color to soft blue */
         }
 
         .box h2 {
@@ -78,7 +82,8 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-            flex: 1 1 100%;
+            flex: 1;
+            min-width: 300px;
             margin-bottom: 20px;
             text-align: center;
         }
@@ -90,51 +95,37 @@
             border: none;
         }
 
-        /* About Us Section */
-        .about-us {
+        /* About Us and Contact Section */
+        .about-contact-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .about-us,
+        .contact-info {
             background: rgba(0, 0, 0, 0.7);
             padding: 20px;
             text-align: center;
             border-radius: 8px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-            margin-bottom: 10px;
-            flex: 1 1 30%;
-            position: absolute;
-            bottom: 100px;
-            right: 20px;
+            flex: 1;
+            min-width: 280px;
         }
 
-        .about-us h2 {
+        .about-us h2,
+        .contact-info h3 {
             font-size: 1.8rem;
             color: #4CAF50;
             margin-bottom: 20px;
         }
 
-        .about-us p {
+        .about-us p,
+        .contact-info p {
             color: #ddd;
             font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-
-        /* Contact Info Section */
-        .contact-info {
-            background: rgba(0, 0, 0, 0.7);
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-            margin-top: 40px;
-            flex: 1 1 45%;
-        }
-
-        .contact-info h3 {
-            font-size: 1.5rem;
-            color: #4CAF50;
-            margin-bottom: 10px;
-        }
-
-        .contact-info p {
-            font-size: 1.1rem;
-            color: white;
             margin-bottom: 10px;
         }
 
@@ -158,70 +149,15 @@
                 align-items: center;
             }
 
-            .box, .about-us, .contact-info {
+            .box,
+            .about-us,
+            .contact-info {
                 flex-basis: 90%;
             }
-        }
-    </style>
-</head>
 
-<body>
+            .calendly-box iframe {
+                height: 500px;
+            }
 
-    <!-- Header Section -->
-    <header>
-        <h1>Welcome to Islamic Teacher</h1>
-        <p>Your destination for Quran lessons and Islamic studies for all ages!</p>
-    </header>
-
-    <!-- Box Container -->
-    <section class="container">
-        <!-- Quran Learning Box -->
-        <div class="box">
-            <h2>Quran Learning</h2>
-            <p>Personalized Quran lessons for students of all ages and levels.</p>
-        </div>
-
-        <!-- Islamic Studies Box -->
-        <div class="box">
-            <h2>Islamic Studies</h2>
-            <p>Explore Islamic teachings, history, and principles to deepen your knowledge.</p>
-        </div>
-
-        <!-- Arabic Learning Box -->
-        <div class="box">
-            <h2>Arabic Learning</h2>
-            <p>Learn Arabic to better understand the Quran and Islamic texts.</p>
-        </div>
-    </section>
-
-    <!-- Calendly Section -->
-    <section class="calendly-box">
-        <h2>Schedule a Meeting</h2>
-        <!-- Calendly inline widget begin -->
-        <div class="calendly-inline-widget" data-url="https://calendly.com/learn9574/60min" style="min-width:320px;height:600px;"></div>
-        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-        <!-- Calendly inline widget end -->
-    </section>
-
-    <!-- About Us Section -->
-    <section class="about-us">
-        <h2>About Us</h2>
-        <p>We offer personalized lessons in Quran, Islamic studies, and Arabic for students of all ages.</p>
-    </section>
-
-    <!-- Contact Information Section -->
-    <section class="contact-info">
-        <h3>Contact Information</h3>
-        <p>Email: <a href="mailto:learn9574@gmail.com">learn9574@gmail.com</a></p>
-        <p>Phone: <a href="tel:+16516668687">651-666-8687</a></p>
-        <p>Location: <a href="https://maps.google.com/?q=Twin+Cities,+Minnesota" target="_blank">Twin Cities, Minnesota</a></p>
-    </section>
-
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2025 Islamic Teacher. All rights reserved.</p>
-    </footer>
-
-</body>
-
-</html>
+            /* Make About Us and Contact stack vertically on small screens */
+            .about-cont
