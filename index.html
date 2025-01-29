@@ -1,83 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Islamic Teacher - Learn Quran Online</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: url('https://i.imgur.com/3QZQZQZ.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: #fff;
-    }
-    header {
-      background: rgba(0, 0, 0, 0.7);
-      padding: 20px;
-      text-align: center;
-    }
-    h1 {
-      font-size: 3rem;
-      margin: 0;
-    }
-    .container {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 20px;
-      background: rgba(0, 0, 0, 0.7);
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    }
-    .surah {
-      margin-bottom: 20px;
-    }
-    .surah h2 {
-      color: #ffcc00;
-      font-size: 2rem;
-    }
-    .surah p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-    }
-    audio {
-      width: 100%;
-      margin-top: 10px;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    .fade-in {
-      animation: fadeIn 2s ease-in-out;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Islamic Teacher - Learn Quran & Islamic Studies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header class="fade-in">
-    <h1>Islamic Teacher</h1>
-    <p>Learn Quran Online with Expert Guidance</p>
-  </header>
+<body class="bg-gray-100 text-gray-900">
 
-  <div class="container fade-in">
-    <div class="surah">
-      <h2>Surah Al-Alaq (The Clot)</h2>
-      <p>Read in the name of your Lord who created - Created man from a clinging substance. Read, and your Lord is the most Generous - Who taught by the pen - Taught man that which he knew not.</p>
-      <audio controls>
-        <source src="https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/096.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
-    </div>
+    <!-- Navigation Bar -->
+    <nav class="bg-green-700 text-white py-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <h1 class="text-2xl font-bold">Islamic Teacher</h1>
+            <ul class="flex space-x-6">
+                <li><a href="#" class="hover:text-yellow-300">Home</a></li>
+                <li><a href="#" class="hover:text-yellow-300">Quran Lessons</a></li>
+                <li><a href="#" class="hover:text-yellow-300">Islamic Studies</a></li>
+                <li><a href="#" class="hover:text-yellow-300">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <div class="surah">
-      <h2>Surah Al-Fatiha (The Opening)</h2>
-      <p>In the name of Allah, the Entirely Merciful, the Especially Merciful. [All] praise is [due] to Allah, Lord of the worlds - The Entirely Merciful, the Especially Merciful, Sovereign of the Day of Recompense. It is You we worship and You we ask for help. Guide us to the straight path - The path of those upon whom You have bestowed favor, not of those who have evoked [Your] anger or of those who are astray.</p>
-      <audio controls>
-        <source src="https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/001.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
-    </div>
-  </div>
+    <!-- Hero Section -->
+    <header class="bg-cover bg-center h-screen flex items-center justify-center" style="background-image: url('https://source.unsplash.com/1600x900/?mosque,quran');">
+        <div class="bg-black bg-opacity-50 p-8 rounded-lg text-center text-white">
+            <h2 class="text-4xl font-bold">Welcome to Islamic Teacher</h2>
+            <p class="text-lg mt-4">Learn the Quran & Islamic Studies in an engaging way for all ages.</p>
+            <a href="#" class="mt-6 inline-block bg-yellow-400 text-black px-6 py-3 rounded-full text-lg font-semibold hover:bg-yellow-500 transition">Get Started</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="container mx-auto px-6 py-12 text-center">
+        <h2 class="text-3xl font-bold text-green-700">Why Learn With Us?</h2>
+        <p class="mt-4 text-gray-700">We provide structured Quran learning, Islamic history, and interactive lessons for students of all levels.</p>
+
+        <div class="grid md:grid-cols-3 gap-6 mt-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-bold text-green-700">📖 Quran Recitation</h3>
+                <p class="mt-2 text-gray-600">Learn proper Tajweed and pronunciation.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-bold text-green-700">🌍 Islamic Studies</h3>
+                <p class="mt-2 text-gray-600">Understand Islamic teachings and history.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-bold text-green-700">🕌 Duas & Hadith</h3>
+                <p class="mt-2 text-gray-600">Learn essential duas and prophetic traditions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-green-700 text-white py-6 text-center">
+        <p>&copy; 2024 Islamic Teacher. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
