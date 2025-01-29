@@ -26,31 +26,49 @@
             margin: 0;
         }
 
-        section {
-            margin: 20px;
+        /* Grid Layout for Boxes */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Three columns for boxes */
+            gap: 20px;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.7);
-            border-radius: 8px;
         }
 
-        .scheduling-box {
+        .box {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .box h2 {
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        .box p {
+            color: white;
+            font-size: 1.2em;
+        }
+
+        .calendly-box {
+            grid-column: span 2; /* Makes the Calendly box span two columns */
             background-color: white;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-top: 30px;
-            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        .scheduling-box h2 {
-            color: #4CAF50;
-        }
-
-        .calendly-iframe {
+        .calendly-box iframe {
             width: 100%;
-            max-width: 600px; /* Set a max-width to limit the size of the Calendly widget */
-            height: 700px;
-            margin: 0 auto;
+            height: 100%;
+            border: none;
+            border-radius: 8px;
         }
 
         footer {
@@ -94,16 +112,33 @@
         <p>Your destination for Quran lessons and Islamic studies for all ages!</p>
     </header>
 
-    <!-- Scheduling Section -->
-    <section class="scheduling-box">
-        <h2>Schedule Your Quran or Islamic Studies Lesson</h2>
-        <p>You can book your 1-hour lesson on Saturdays and Sundays between 7 AM and 3 PM. Select your preferred time below:</p>
-        
-        <!-- Calendly Embed (No login required) -->
-        <!-- Calendly inline widget begin -->
-        <div class="calendly-inline-widget" data-url="https://calendly.com/learn9574/60min" style="min-width:320px;height:700px;"></div>
-        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-        <!-- Calendly inline widget end -->
+    <!-- Box Container -->
+    <section class="container">
+        <!-- Quran Learning Box -->
+        <div class="box">
+            <h2>Quran Learning</h2>
+            <p>Learn the Quran with expert guidance and personalized lessons.</p>
+        </div>
+
+        <!-- Islamic Studies Box -->
+        <div class="box">
+            <h2>Islamic Studies</h2>
+            <p>Gain deep knowledge of Islamic teachings, history, and practices.</p>
+        </div>
+
+        <!-- Arabic Learning Box -->
+        <div class="box">
+            <h2>Arabic Learning</h2>
+            <p>Learn Arabic to understand the Quran and Islamic texts better.</p>
+        </div>
+
+        <!-- Calendly Scheduling Box (Larger) -->
+        <div class="calendly-box">
+            <!-- Calendly inline widget begin -->
+            <div class="calendly-inline-widget" data-url="https://calendly.com/learn9574/60min" style="min-width:320px;height:500px;"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            <!-- Calendly inline widget end -->
+        </div>
     </section>
 
     <!-- Contact Information Section -->
