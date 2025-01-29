@@ -52,18 +52,17 @@
             font-size: 1.2em;
         }
 
-        /* Calendly Box - No box around it, aligned to left */
+        /* Calendly Box */
         .calendly-box {
-            grid-column: span 3; /* Makes it span the full width */
+            position: absolute;
+            left: 10%;
+            top: 300px; /* Adjust this for vertical positioning */
             background-color: white;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 30%; /* Adjust width as needed */
             height: 600px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-left: 0; /* Remove space on the left */
         }
 
         .calendly-box iframe {
@@ -104,16 +103,19 @@
             font-weight: bold;
         }
 
+        /* About Section */
         .about-box {
             background-color: rgba(0, 0, 0, 0.7);
             padding: 20px;
             text-align: center;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 300px;
+            position: relative;
+            margin-top: 20px;
+            width: 100%;
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .about-box h2 {
@@ -157,7 +159,7 @@
         </div>
     </section>
 
-    <!-- Calendly Scheduling Box (Wider and aligned left) -->
+    <!-- Calendly Scheduling Box - Positioned Left -->
     <div class="calendly-box">
         <!-- Calendly inline widget begin -->
         <div class="calendly-inline-widget" data-url="https://calendly.com/learn9574/60min" style="min-width:320px;height:600px;"></div>
