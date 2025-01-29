@@ -1,91 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Islamic Teacher - Learn Quran & Islamic Studies</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Islamic Teacher</title>
+    <style>
+        /* Set the background image with animation */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('your-image-url.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            animation: backgroundAnimation 10s ease-in-out infinite;
+        }
+
+        /* Animation for background */
+        @keyframes backgroundAnimation {
+            0% {
+                background-position: center top;
+            }
+
+            50% {
+                background-position: center bottom;
+            }
+
+            100% {
+                background-position: center top;
+            }
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.5);
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+        }
+
+        .scheduling-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+
+        .scheduling-box h2 {
+            color: #4CAF50;
+        }
+
+        .scheduling-box p {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .calendly-iframe {
+            width: 100%;
+            height: 700px;
+            border: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .contact-info h3 {
+            font-size: 1.5em;
+            color: #4CAF50;
+        }
+
+        .contact-info p {
+            color: #fff;
+            font-size: 1.1em;
+        }
+
+        .contact-info a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
 </head>
-<body class="bg-gray-100 text-gray-900">
 
-    <!-- Navigation Bar -->
-    <nav class="bg-green-700 text-white py-4 shadow-lg">
-        <div class="container mx-auto flex justify-between items-center px-6">
-            <h1 class="text-2xl font-bold">Islamic Teacher</h1>
-            <ul class="flex space-x-6">
-                <li><a href="#" class="hover:text-yellow-300">Home</a></li>
-                <li><a href="#" class="hover:text-yellow-300">Quran Lessons</a></li>
-                <li><a href="#" class="hover:text-yellow-300">Islamic Studies</a></li>
-                <li><a href="#" class="hover:text-yellow-300">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+<body>
 
-    <!-- Hero Section -->
-    <header class="bg-cover bg-center h-screen flex items-center justify-center" style="background-image: url('quran.jpg');">
-        <div class="bg-black bg-opacity-50 p-8 rounded-lg text-center text-white">
-            <h2 class="text-4xl font-bold">Welcome to Islamic Teacher</h2>
-            <p class="text-lg mt-4">Learn the Quran & Islamic Studies in an engaging way for all ages.</p>
-            <a href="#" class="mt-6 inline-block bg-yellow-400 text-black px-6 py-3 rounded-full text-lg font-semibold hover:bg-yellow-500 transition">Get Started</a>
-        </div>
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to Islamic Teacher</h1>
+        <p>Your destination for Quran lessons and Islamic studies for all ages!</p>
     </header>
 
-    <!-- About Section -->
-    <section class="container mx-auto px-6 py-12 text-center">
-        <h2 class="text-3xl font-bold text-green-700">Why Learn With Us?</h2>
-        <p class="mt-4 text-gray-700">We provide structured Quran learning, Islamic history, and interactive lessons for students of all levels.</p>
-
-        <!-- Schedule Appointment Section -->
-<section class="bg-gray-100 py-8 text-center">
-    <h2 class="text-2xl font-semibold text-green-700">Schedule Your Quran or Islamic Studies Lesson</h2>
-    <p class="mt-4 text-lg">You can book your 1-hour lesson on Saturdays and Sundays. Available slots:</p>
-    <ul class="text-left mt-4 mx-auto max-w-2xl">
-        <li>🕖 7:00 AM - 8:00 AM</li>
-        <li>🕘 8:00 AM - 9:00 AM</li>
-        <li>🕙 9:00 AM - 10:00 AM</li>
-        <li>🕚 10:00 AM - 11:00 AM</li>
-        <li>🕛 11:00 AM - 12:00 PM</li>
-        <li>🕐 12:00 PM - 1:00 PM</li>
-        <li>🕜 1:00 PM - 2:00 PM</li>
-        <li>🕑 2:00 PM - 3:00 PM</li>
-    </ul>
-    <div class="mt-6">
-        <!-- Calendly Embed Iframe -->
-        <iframe src="https://calendly.com/your-calendly-link?embed_domain=yourdomain.com&embed_type=Inline" width="100%" height="600" frameborder="0">Loading…</iframe>
-    </div>
-</section>
-
-        <div class="grid md:grid-cols-3 gap-6 mt-8">
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <h3 class="text-xl font-bold text-green-700">📖 Quran Recitation</h3>
-                <p class="mt-2 text-gray-600">Learn proper Tajweed and pronunciation.</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <h3 class="text-xl font-bold text-green-700">🌍 Islamic Studies</h3>
-                <p class="mt-2 text-gray-600">Understand Islamic teachings and history.</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <h3 class="text-xl font-bold text-green-700">🕌 Duas & Hadith</h3>
-                <p class="mt-2 text-gray-600">Learn essential duas and prophetic traditions.</p>
-            </div>
+    <!-- Scheduling Section -->
+    <section class="scheduling-box">
+        <h2>Schedule Your Quran or Islamic Studies Lesson</h2>
+        <p>You can book your 1-hour lesson on Saturdays and Sundays between 7 AM and 3 PM. Select your preferred time below:</p>
+        
+        <!-- Calendly Embed -->
+        <div class="mt-6 p-4 bg-gray-100 rounded-lg border-2 border-gray-300">
+            <iframe src="https://calendly.com/your-calendly-link?embed_domain=yourdomain.com&embed_type=Inline" class="calendly-iframe">Loading…</iframe>
         </div>
     </section>
 
-   <!-- Footer -->
-<footer class="bg-green-700 text-white py-6 text-center">
-    <p>&copy; 2024 Islamic Teacher. All rights reserved.</p>
-    <div class="space-y-2">
-        <!-- Email -->
-        <p>📩 Email: <a href="mailto:learn9574@gmail.com" class="underline text-yellow-400">learn9574@gmail.com</a></p>
-        
-        <!-- Phone Number -->
-        <p>📞 Phone: <a href="tel:+16516668687" class="underline text-yellow-400">+1 651 666 8687</a></p>
-        
-        <!-- Location -->
-        <p>📍 Location: <a href="https://www.google.com/maps?q=Twin+Cities,+Minnesota" class="underline text-yellow-400" target="_blank">Twin Cities, Minnesota</a></p>
-    </div>
-</footer>
+    <!-- Contact Information Section -->
+    <section class="contact-info">
+        <h3>Contact Information</h3>
+        <p>If you have any questions or need assistance, feel free to reach out to us:</p>
+        <p>Email: <a href="mailto:learn9574@gmail.com">learn9574@gmail.com</a></p>
+        <p>Phone: <a href="tel:+16516668687">651-666-8687</a></p>
+        <p>Location: <a href="https://maps.google.com/?q=Twin+Cities,+Minnesota" target="_blank">Twin Cities, Minnesota</a></p>
+    </section>
 
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Islamic Teacher. All rights reserved.</p>
+    </footer>
 
 </body>
+
 </html>
