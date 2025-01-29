@@ -29,7 +29,7 @@
         /* Grid Layout for Boxes */
         .container {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr; /* Make all boxes equally sized */
+            grid-template-columns: 1fr 1fr 1fr;
             gap: 20px;
             padding: 20px;
         }
@@ -52,16 +52,16 @@
             font-size: 1.2em;
         }
 
-        /* Calendly Box */
+        /* Calendly Box - Positioned on the left */
         .calendly-box {
             position: absolute;
             left: 10%;
-            top: 300px; /* Adjust this for vertical positioning */
+            top: 300px;
             background-color: white;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: 30%; /* Adjust width as needed */
+            width: 30%;
             height: 600px;
         }
 
@@ -72,19 +72,39 @@
             border-radius: 8px;
         }
 
-        footer {
-            text-align: center;
+        /* About Section - Positioned to the right middle */
+        .about-box {
+            background-color: rgba(0, 0, 0, 0.7);
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: absolute;
+            right: 10%;
+            top: 200px;
+            width: 300px;
         }
 
+        .about-box h2 {
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        .about-box p {
+            color: white;
+            font-size: 1.2em;
+        }
+
+        /* Contact Information - Positioned at the bottom right */
         .contact-info {
-            margin-top: 20px;
+            position: absolute;
+            right: 10%;
+            bottom: 20px;
             padding: 20px;
             background-color: rgba(0, 0, 0, 0.7);
             border-radius: 8px;
             text-align: center;
+            width: 300px;
         }
 
         .contact-info h3 {
@@ -103,30 +123,13 @@
             font-weight: bold;
         }
 
-        /* About Section */
-        .about-box {
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 20px;
+        footer {
             text-align: center;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            position: relative;
-            margin-top: 20px;
-            width: 100%;
-            max-width: 300px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .about-box h2 {
-            color: #4CAF50;
-            margin-bottom: 20px;
-        }
-
-        .about-box p {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
             color: white;
-            font-size: 1.2em;
         }
+
     </style>
 </head>
 
@@ -159,8 +162,9 @@
         </div>
     </section>
 
-    <!-- Calendly Scheduling Box - Positioned Left -->
+    <!-- Title for Calendly -->
     <div class="calendly-box">
+        <h2 style="text-align:center; color:#4CAF50;">Schedule a Meeting</h2>
         <!-- Calendly inline widget begin -->
         <div class="calendly-inline-widget" data-url="https://calendly.com/learn9574/60min" style="min-width:320px;height:600px;"></div>
         <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
