@@ -3,63 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Learn Quran Online</title>
+  <title>Islamic Teacher - Learn Quran Online</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+      font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
+      background: url('https://i.imgur.com/3QZQZQZ.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
     }
     header {
-      background-color: #2c3e50;
-      color: white;
+      background: rgba(0, 0, 0, 0.7);
       padding: 20px;
       text-align: center;
+    }
+    h1 {
+      font-size: 3rem;
+      margin: 0;
     }
     .container {
       max-width: 800px;
       margin: 20px auto;
       padding: 20px;
-      background-color: white;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    h1 {
-      margin-top: 0;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
     .surah {
       margin-bottom: 20px;
     }
     .surah h2 {
-      color: #2c3e50;
+      color: #ffcc00;
+      font-size: 2rem;
+    }
+    .surah p {
+      font-size: 1.2rem;
+      line-height: 1.6;
     }
     audio {
       width: 100%;
       margin-top: 10px;
     }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .fade-in {
+      animation: fadeIn 2s ease-in-out;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Learn Quran Online</h1>
-    <p>Your source for Quranic learning</p>
+  <header class="fade-in">
+    <h1>Islamic Teacher</h1>
+    <p>Learn Quran Online with Expert Guidance</p>
   </header>
 
-  <div class="container">
+  <div class="container fade-in">
     <div class="surah">
-      <h2>Surah Al-Fatiha</h2>
-      <p>In the name of Allah, the Entirely Merciful, the Especially Merciful.</p>
+      <h2>Surah Al-Alaq (The Clot)</h2>
+      <p>Read in the name of your Lord who created - Created man from a clinging substance. Read, and your Lord is the most Generous - Who taught by the pen - Taught man that which he knew not.</p>
       <audio controls>
-        <source src="https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/001.mp3" type="audio/mpeg">
+        <source src="https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/096.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
       </audio>
     </div>
 
     <div class="surah">
-      <h2>Surah Al-Ikhlas</h2>
-      <p>Say, "He is Allah, [who is] One."</p>
+      <h2>Surah Al-Fatiha (The Opening)</h2>
+      <p>In the name of Allah, the Entirely Merciful, the Especially Merciful. [All] praise is [due] to Allah, Lord of the worlds - The Entirely Merciful, the Especially Merciful, Sovereign of the Day of Recompense. It is You we worship and You we ask for help. Guide us to the straight path - The path of those upon whom You have bestowed favor, not of those who have evoked [Your] anger or of those who are astray.</p>
       <audio controls>
-        <source src="https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/112.mp3" type="audio/mpeg">
+        <source src="https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/001.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
       </audio>
     </div>
