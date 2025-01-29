@@ -26,12 +26,13 @@
             margin: 0;
         }
 
-        /* Grid Layout for Boxes */
+        /* Flexbox layout for boxes */
         .container {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            display: flex;
+            justify-content: space-between;
             gap: 20px;
             padding: 20px;
+            flex-wrap: wrap;
         }
 
         .box {
@@ -40,6 +41,8 @@
             text-align: center;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            flex-basis: 30%;
+            margin-bottom: 20px;
         }
 
         .box h2 {
@@ -54,15 +57,17 @@
 
         /* Calendly Box - Positioned on the left */
         .calendly-box {
-            position: absolute;
-            left: 10%;
-            top: 300px;
+            position: relative;
+            left: 0;
+            top: 40px;
             background-color: white;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: 30%;
+            width: 100%;
+            max-width: 600px;
             height: 600px;
+            margin-left: 10%;
         }
 
         .calendly-box iframe {
@@ -79,10 +84,11 @@
             text-align: center;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            position: absolute;
+            position: relative;
             right: 10%;
-            top: 200px;
-            width: 300px;
+            top: 20px;
+            width: 100%;
+            max-width: 300px;
         }
 
         .about-box h2 {
@@ -97,14 +103,15 @@
 
         /* Contact Information - Positioned at the bottom right */
         .contact-info {
-            position: absolute;
+            position: relative;
             right: 10%;
             bottom: 20px;
             padding: 20px;
             background-color: rgba(0, 0, 0, 0.7);
             border-radius: 8px;
             text-align: center;
-            width: 300px;
+            width: 100%;
+            max-width: 300px;
         }
 
         .contact-info h3 {
@@ -129,7 +136,6 @@
             background-color: rgba(0, 0, 0, 0.5);
             color: white;
         }
-
     </style>
 </head>
 
