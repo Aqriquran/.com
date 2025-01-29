@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn Quran Online | Quran and Islamic Studies</title>
-    
+    <title>Learn Quran Online | Islamic Studies</title>
+
     <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <style>
         :root {
             --primary-color: #2E7D32;
@@ -123,7 +123,7 @@
             .hero-section {
                 padding: 80px 0 40px;
             }
-            
+
             .service-card {
                 margin-bottom: 30px;
             }
@@ -135,13 +135,13 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-        <a class="navbar-brand fw-bold" href="/" style="color: var(--primary-color);">Quran & Islamic Teacher</a>
-      <a class="nav-link" href="/#services">Quran and Islamic Teacher</a>
+        <a class="navbar-brand fw-bold" href="#" style="color: var(--primary-color);">Quran and Islamic Teacher</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-               <a class="nav-link" href="/">Home</a>
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
                 <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
@@ -151,16 +151,16 @@
 </nav>
 
 <!-- Hero Section -->
-<section id="home" class="hero-section">
+<section class="hero-section">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <h1 class="display-4 fw-bold mb-4">Learn Quran Online</h1>
-                <p class="lead mb-4">Personalized Islamic education for all ages.</p>
-                <a href="https://calendly.com/learn9574/60min" class="cta-btn d-inline-block" target="_blank">Start Learning Today</a>
+                <p class="lead mb-4">Personalized Islamic education for all ages, available 24/7 from anywhere in the world.</p>
+                <a href="https://calendly.com/learn9574/60min" target="_blank" class="cta-btn d-inline-block">Start Learning Today</a>
             </div>
             <div class="col-lg-6 mt-5 mt-lg-0">
-                
+               
             </div>
         </div>
     </div>
@@ -182,7 +182,7 @@
                     <p>Step-by-step guidance for proper Quran recitation</p>
                 </div>
             </div>
-            
+
             <div class="col-md-6 col-lg-4">
                 <div class="service-card p-4">
                     <i class="fas fa-mosque service-icon"></i>
@@ -202,14 +202,18 @@
     </div>
 </section>
 
-<!-- About Us Section -->
-<section id="about" class="py-5 bg-light">
+<!-- About Section -->
+<section id="about" class="py-5">
     <div class="container">
         <div class="text-center mb-5">
             <h2 class="fw-bold mb-3">About Us</h2>
-            <p class="text-muted">We are passionate about helping students of all ages to learn the Quran and Islamic studies.</p>
+            <p class="text-muted">We offer high-quality online Quran and Islamic studies lessons taught by experienced and passionate teachers.</p>
         </div>
-        <p class="text-center">Our goal is to make Quranic education accessible to everyone, anywhere, anytime. We focus on individualized attention and a personalized learning experience.</p>
+        <div class="row">
+            <div class="col-md-12">
+                <p>We provide personalized learning experiences to individuals of all ages. Our goal is to make learning the Quran and Islamic studies accessible and effective for everyone.</p>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -218,18 +222,31 @@
     <div class="container">
         <div class="text-center mb-5">
             <h2 class="fw-bold mb-3">Contact Us</h2>
-            <p class="text-muted">Get in touch with us for more information or to schedule your first lesson.</p>
+            <p class="text-muted">We are here to help. Reach out to us for any questions or inquiries.</p>
         </div>
+
         <div class="row">
             <div class="col-md-6">
-                <h5>Email:</h5>
-                <p><a href="mailto:learn9574@gmail.com">learn9574@gmail.com</a></p>
-                <h5>Phone:</h5>
-                <p><a href="tel:+16516668687">+1 651-666-8687</a></p>
+                <p><strong>Email:</strong> learn9574@gmail.com</p>
+                <p><strong>Phone:</strong> +1 651-666-8687</p>
+                <p><strong>Location:</strong> Twin Cities, Minnesota</p>
             </div>
             <div class="col-md-6">
-                <h5>Location:</h5>
-                <p>Twin Cities, Minnesota</p>
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Your Name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Your Email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
             </div>
         </div>
     </div>
