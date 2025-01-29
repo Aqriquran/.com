@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Islamic Teacher</title>
     <style>
-        /* Set the background image */
+        /* Set the background image for the entire website */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -29,7 +29,7 @@
         /* Grid Layout for Boxes */
         .container {
             display: grid;
-            grid-template-columns: 1fr 2fr 1fr; /* Adjust columns: Calendly box takes 2 columns */
+            grid-template-columns: 1fr 1fr 1fr; /* Make all boxes equally sized */
             gap: 20px;
             padding: 20px;
         }
@@ -52,13 +52,14 @@
             font-size: 1.2em;
         }
 
+        /* Calendly Box - No box around it, aligned to left */
         .calendly-box {
-            grid-column: span 2; /* Makes the Calendly box span two columns */
+            grid-column: span 3; /* Makes it span the full width */
             background-color: white;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            height: 500px;
+            height: 600px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -109,7 +110,10 @@
             text-align: center;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            grid-column: span 3; /* Makes the about section span all three columns */
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 300px;
         }
 
         .about-box h2 {
@@ -120,12 +124,6 @@
         .about-box p {
             color: white;
             font-size: 1.2em;
-        }
-
-        .about-box a {
-            color: #4CAF50;
-            text-decoration: none;
-            font-weight: bold;
         }
     </style>
 </head>
@@ -157,22 +155,20 @@
             <h2>Arabic Learning</h2>
             <p>Learn Arabic to understand the Quran and Islamic texts better.</p>
         </div>
-
-        <!-- Calendly Scheduling Box (Wider and aligned left) -->
-        <div class="calendly-box">
-            <!-- Calendly inline widget begin -->
-            <div class="calendly-inline-widget" data-url="https://calendly.com/learn9574/60min" style="min-width:320px;height:500px;"></div>
-            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-            <!-- Calendly inline widget end -->
-        </div>
     </section>
+
+    <!-- Calendly Scheduling Box (Wider and aligned left) -->
+    <div class="calendly-box">
+        <!-- Calendly inline widget begin -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/learn9574/60min" style="min-width:320px;height:600px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        <!-- Calendly inline widget end -->
+    </div>
 
     <!-- About Section (Clickable Box) -->
     <section class="about-box">
         <h2>About Us</h2>
-        <p>We offer comprehensive Quran and Islamic studies lessons for learners of all ages. Our goal is to spread knowledge of the Quran, Islamic teachings, and Arabic language to help everyone deepen their understanding and connection with Islam. </p>
-        <p>Click below to learn more about our services:</p>
-        <a href="#services">Learn More</a>
+        <p>We offer comprehensive Quran and Islamic studies lessons for learners of all ages. Our goal is to spread knowledge of the Quran, Islamic teachings, and Arabic language to help everyone deepen their understanding and connection with Islam.</p>
     </section>
 
     <!-- Contact Information Section -->
