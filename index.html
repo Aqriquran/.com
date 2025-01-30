@@ -38,6 +38,55 @@
             backdrop-filter: blur(10px);
             box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
         }
+/* Logo Container */
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+/* Flag Background */
+.flag-container {
+    width: 60px;
+    height: 40px;
+    overflow: hidden;
+    margin-right: 8px;
+}
+
+.flag {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: wave 3s infinite ease-in-out;
+}
+
+/* Text Styling */
+.logo-text {
+    text-align: left;
+    color: var(--primary-color);
+}
+
+.arabic-title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.middle-text {
+    font-size: 14px;
+    color: var(--accent-color);
+}
+
+.english-title {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Waving Animation */
+@keyframes wave {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(3px); }
+    100% { transform: translateY(0); }
+}
 
         .nav-link {
             color: var(--text-dark) !important;
@@ -142,7 +191,24 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-        <a class="navbar-brand fw-bold" href="#" style="color: var(--primary-color);">Quran and Islamic Studies</a>
+        <div class="d-flex align-items-center">
+    <!-- Logo -->
+    <div class="logo-container">
+        <div class="flag-container">
+            <img src="somali-flag.gif" alt="Somali Flag" class="flag">
+        </div>
+        <div class="logo-text">
+            <h2 class="arabic-title">معهد الغرباء</h2>
+            <h3 class="middle-text">فطوبى للغرباء</h3>
+            <h4 class="english-title">Al-Ghuraba Institute</h4>
+        </div>
+    </div>
+
+    <!-- Website Name -->
+    <a class="navbar-brand fw-bold ms-3" href="#" style="color: var(--primary-color);">
+        Quran and Islamic Studies
+    </a>
+</div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
