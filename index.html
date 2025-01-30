@@ -37,78 +37,58 @@
             background: rgba(255, 255, 255, 0.95) !important;
             backdrop-filter: blur(10px);
             box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-        }
-/* Logo Container */
+       /* Logo Container */
 .logo-container {
     display: flex;
     align-items: center;
-    margin-right: 15px;
+    margin-right: 10px;
 }
 
-/* Flag Background */
-.flag-container {
-    width: 60px;
-    height: 40px;
+/* Circular Logo */
+.logo {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: lightblue;
     overflow: hidden;
-    margin-right: 8px;
-}
-
-.flag {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     animation: wave 3s infinite ease-in-out;
 }
 
 /* Text Styling */
 .logo-text {
-    text-align: left;
-    color: var(--primary-color);
+    text-align: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
 }
 
 .arabic-title {
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Amiri', serif;
 }
 
 .middle-text {
     font-size: 14px;
-    color: var(--accent-color);
+    font-weight: 500;
+    color: yellow;
 }
 
 .english-title {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
 }
 
-/* Waving Animation */
+/* Waving Effect */
 @keyframes wave {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(3px); }
-    100% { transform: translateY(0); }
+    0% { transform: rotate(0deg) translateY(0px); }
+    50% { transform: rotate(1deg) translateY(3px); }
+    100% { transform: rotate(0deg) translateY(0px); }
 }
-
-        .nav-link {
-            color: var(--text-dark) !important;
-            font-weight: 500;
-            position: relative;
-            margin: 0 15px;
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--primary-color);
-            transition: width 0.3s ease;
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
 
         /* Hero Section */
         .hero-section {
@@ -188,21 +168,14 @@
 </head>
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg fixed-top">
+<nav class="navbar">
     <div class="container">
-        <div class="d-flex align-items-center">
-    <!-- Logo -->
-    <div class="logo-container">
-        <div class="flag-container">
-            <img src="somali-flag.gif" alt="Somali Flag" class="flag">
-        </div>
-        <div class="logo-text">
-            <h2 class="arabic-title">معهد الغرباء</h2>
-            <h3 class="middle-text">فطوبى للغرباء</h3>
-            <h4 class="english-title">Al-Ghuraba Institute</h4>
-        </div>
+        <a class="navbar-brand fw-bold" href="#" style="color: var(--primary-color);">
+            Quran and Islamic Studies
+        </a>
     </div>
+</nav>
+
 
     <!-- Website Name -->
     <a class="navbar-brand fw-bold ms-3" href="#" style="color: var(--primary-color);">
