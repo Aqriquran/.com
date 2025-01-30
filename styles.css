@@ -1,0 +1,163 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #004080; /* Somali flag blue */
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: url('somali-flag.gif') center/cover no-repeat;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: wave 3s infinite ease-in-out;
+}
+
+.logo-text {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.arabic-title {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Amiri', serif;
+}
+
+.middle-text {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.english-title {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Waving Effect */
+@keyframes wave {
+    0% { transform: rotate(0deg) translateY(0px); }
+    50% { transform: rotate(1deg) translateY(3px); }
+    100% { transform: rotate(0deg) translateY(0px); }
+}
+
+/* Navbar Text */
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #0077cc;
+    color: white;
+    padding: 50px 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+.btn {
+    background-color: white;
+    color: #0077cc;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* About Section */
+.about {
+    padding: 30px 20px;
+}
+
+.about h2 {
+    font-size: 28px;
+    color: #004080;
+}
+
+.about p {
+    font-size: 18px;
+}
+
+/* Courses Section */
+.courses {
+    padding: 30px 20px;
+    background-color: #eef2f3;
+}
+
+.courses h2 {
+    font-size: 28px;
+    color: #004080;
+}
+
+.course-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.course-item {
+    background-color: #0077cc;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+/* Contact Section */
+.contact {
+    padding: 30px 20px;
+}
+
+.contact h2 {
+    font-size: 28px;
+    color: #004080;
+}
+
+.contact a {
+    color: #0077cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: #004080;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
