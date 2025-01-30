@@ -3,161 +3,189 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
-    text-align: center;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-/* Navbar */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navbar Styles */
 .navbar {
-    background-color: #004080; /* Somali flag blue */
-    padding: 15px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Logo */
 .logo-container {
     display: flex;
     align-items: center;
-    margin-right: 10px;
 }
 
-.logo {
-    width: 150px;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background: url('somali-flag.gif') center/cover no-repeat;
+.flag-container {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 50px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    animation: wave 3s infinite ease-in-out;
+    margin-right: 15px;
+}
+
+.flag {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #4189DD; /* Light blue for Somali flag */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 50"><polygon points="40,15 46,30 40,45 34,30" fill="white"/></svg>'); /* White star */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40%;
+    animation: wave 3s infinite linear;
+    transform-origin: bottom;
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: skewY(0deg) scaleY(1);
+    }
+    25% {
+        transform: skewY(5deg) scaleY(0.9);
+    }
+    50% {
+        transform: skewY(0deg) scaleY(1);
+    }
+    75% {
+        transform: skewY(-5deg) scaleY(0.9);
+    }
 }
 
 .logo-text {
-    text-align: center;
-    color: white;
-    font-weight: bold;
+    text-align: left;
 }
 
 .arabic-title {
-    font-size: 18px;
-    font-weight: 700;
-    font-family: 'Amiri', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
 }
 
 .middle-text {
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 1rem;
+    color: #666;
 }
 
 .english-title {
-    font-size: 12px;
-    font-weight: 500;
-}
-
-/* Waving Effect */
-@keyframes wave {
-    0% { transform: rotate(0deg) translateY(0px); }
-    50% { transform: rotate(1deg) translateY(3px); }
-    100% { transform: rotate(0deg) translateY(0px); }
-}
-
-/* Navbar Text */
-.navbar-brand {
-    font-size: 24px;
+    font-size: 1.2rem;
     font-weight: bold;
-    text-transform: uppercase;
-    color: white;
+    color: #333;
+}
+
+.navbar-brand {
+    font-size: 1.2rem;
+    color: #333;
     text-decoration: none;
+    margin-left: auto;
 }
 
 /* Hero Section */
 .hero {
-    background-color: #0077cc;
-    color: white;
-    padding: 50px 20px;
+    background-color: #4189DD;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
 }
 
 .hero h1 {
-    font-size: 36px;
+    font-size: 3rem;
+    margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 18px;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
 }
 
-.btn {
-    background-color: white;
-    color: #0077cc;
+.hero .btn {
+    background-color: #fff;
+    color: #4189DD;
     padding: 10px 20px;
     text-decoration: none;
-    font-weight: bold;
     border-radius: 5px;
+    font-size: 1rem;
 }
 
 /* About Section */
 .about {
-    padding: 30px 20px;
+    padding: 50px 0;
+    text-align: center;
 }
 
 .about h2 {
-    font-size: 28px;
-    color: #004080;
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
 .about p {
-    font-size: 18px;
+    font-size: 1.1rem;
+    color: #666;
 }
 
 /* Courses Section */
 .courses {
-    padding: 30px 20px;
-    background-color: #eef2f3;
+    padding: 50px 0;
+    text-align: center;
 }
 
 .courses h2 {
-    font-size: 28px;
-    color: #004080;
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
 .course-list {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
-    gap: 15px;
 }
 
 .course-item {
-    background-color: #0077cc;
-    color: white;
-    padding: 10px 20px;
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
     border-radius: 5px;
-    font-size: 18px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1.1rem;
+    width: 200px;
 }
 
 /* Contact Section */
 .contact {
-    padding: 30px 20px;
+    padding: 50px 0;
+    text-align: center;
 }
 
 .contact h2 {
-    font-size: 28px;
-    color: #004080;
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
-.contact a {
-    color: #0077cc;
-    text-decoration: none;
-    font-weight: bold;
+.contact p {
+    font-size: 1.1rem;
+    color: #666;
 }
 
 /* Footer */
 footer {
-    background-color: #004080;
-    color: white;
-    padding: 10px;
-    margin-top: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
 }
